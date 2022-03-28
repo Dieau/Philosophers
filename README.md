@@ -9,7 +9,7 @@ In this project, we will learn the basics of threading a process and using mutex
 # Table of Contents
 
 1. [ The Dining Philosophers Problem. ](#desc)
-2. [ My implementation. ](#solution)
+2. [ Threads. ](#threads)
 3. [ The deadlock issue. ](#deadlock)
 
 <a name="desc"></a>
@@ -35,8 +35,8 @@ Eating is not limited by the remaining amounts of spaghetti or stomach space; an
 
 The problem is how to design a discipline of behavior (a concurrent algorithm) such that no philosopher will starve; i.e., each can forever continue to alternate between eating and thinking, assuming that no philosopher can know when others may want to eat or think.
 
-<a name="solution"></a>
-## 2. My implementation
+<a name="threads"></a>
+## 2. Threads
 
 In my project, we use the user's input to define the parameters of the program.
 For the simulation to start, the user must enter: 
@@ -57,6 +57,8 @@ The key for this to work, is to represent each philosopher by a Thread of the ma
 ![Screenshot](/img/1200px-Multithreaded_process.svg.png)
 
 In computer science, a thread of execution is the smallest sequence of programmed instructions that can be managed independently by a scheduler, which is typically a part of the operating system. The implementation of threads and processes differs between operating systems, but in most cases a thread is a component of a process. The multiple threads of a given process may be executed concurrently (via multithreading capabilities), sharing resources such as memory, while different processes do not share these resources.
+
+By using defining our philosophers as Threads, we can assure their independence from the others while still letting them access the memory they need for their routine (The forks for instance, or to check if any other philosopher has died).
 
 
 <a name="deadlock"></a>
