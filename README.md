@@ -88,7 +88,13 @@ A big - if not the biggest - challenge with this project, is how to avoid any de
 
 For instance, if each philosopher would start the simulation by grabbing the fork at their right, every one of them will end up holding only one fork and starve to death.
 
-An easy solution i chose is to separate philosophers depending on their index : is it even or odd ?
-By
+An easy way to avoid this issue, is to separate philosophers depending on their index : is it even or odd ?
 
 ![Screenshot](/img/cf7f850832f8aa117e3246babe2e4abb.jpg)
+
+If his index is even, the philosopher will start grabbing the fork on his right side first, before attempting to grab on his left.
+
+If it is odd, the philosopher will start grabbing the fork on his left side first, before attempting to grab on his right.
+
+This way, we break the straightness of fork grabbing and the philosophers will alternate their eating depending on their index. No fork will be grabbed if the other needed is not available, and no deadlock can happen. At best, if the time permits it, the simulation will continue indefinitely or until the meal objective is reached.
+
