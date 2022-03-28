@@ -85,7 +85,7 @@ We also make sure to display each action performed by philosophers, wether it is
 <a name="deadlock"></a>
 ## 4. How to avoid deadlocks
 
-A big - if not the biggest - challenge with this project, is how to avoid any deadlock during fork distribution.
+A big - if not the biggest - challenge with this project, was how to avoid any deadlock during fork distribution.
 
 For instance, if each philosopher would start the simulation by grabbing the fork at their right, every one of them will end up holding only one fork and starve to death.
 
