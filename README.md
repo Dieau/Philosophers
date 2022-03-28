@@ -12,6 +12,7 @@ In this project, we will learn the basics of threading a process and using mutex
 2. [ Threads. ](#threads)
 3. [ Mutexes. ](#mutexes)
 4. [How to avoid Deadlocks.](#deadlock)
+5. [Conclusion.](#conc)
 
 <a name="desc"></a>
 ## 1. The Dining Philosophers Problem
@@ -98,3 +99,9 @@ If it is odd, the philosopher will start grabbing the fork on his left side firs
 
 This way, we break the straightness of fork grabbing and the philosophers will alternate their eating depending on their index. No fork will be grabbed if the other needed is not available, and no deadlock can happen. At best, if the time permits it, the simulation will continue indefinitely or until the meal objective is reached.
 
+
+<a name="conc"></a>
+## 5. Conclusion
+
+
+![Screenshot](/img/100.png)
