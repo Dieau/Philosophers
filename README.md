@@ -78,7 +78,9 @@ Here, we will represent each fork by a mutex, and make them available to the phi
 
 Once a pihlosopher grabs a fork, it locks itself in a mutex and disappears from the table, becoming unavailable to others.
 
-We also make sure to display each action performed by philosophers, wether it is eating, sleeping, thinking or even grabbing forks in mutexes so they cannot write at the same time as others (Because they behave independently from all others).
+We also make sure to display each action performed by philosophers, wether it is eating, sleeping, thinking or even grabbing forks in mutexes so they cannot write at the same time as others (Because they behave independently from each other).
 
 <a name="deadlock"></a>
 ## 4. How to avoid deadlocks
+
+A big
