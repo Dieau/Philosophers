@@ -58,7 +58,7 @@ The key for this to work, is to represent each philosopher by a Thread of the ma
 
 In computer science, a thread of execution is the smallest sequence of programmed instructions that can be managed independently by a scheduler, which is typically a part of the operating system. The implementation of threads and processes differs between operating systems, but in most cases a thread is a component of a process. The multiple threads of a given process may be executed concurrently (via multithreading capabilities), sharing resources such as memory, while different processes do not share these resources.
 
-By using defining our philosophers as Threads, we can assure their independence from the others while still letting them access the memory they need for their routine (The forks for instance, or to check if any other philosopher has died).
+By defining our philosophers as Threads, we can assure their independence from the others while still letting them access the memory they need for their routine (The forks for instance, or to check if any other philosopher has died).
 
 
 <a name="mutex"></a>
@@ -70,3 +70,9 @@ The main problem with the philosophers diner, is fork management.
 We must be sure that once a fork is picked up, it should disappear from the table and not be accessible by another philosopher, in which case we would face a data race.
 
 In computer science, a lock or mutex (from mutual exclusion) is a synchronization primitive: a mechanism that enforces limits on access to a resource when there are many threads of execution. A lock is designed to enforce a mutual exclusion concurrency control policy.
+
+![Screenshot](/img/Mutex.png)
+
+Here, we will represent each fork by a mutex, and make them available to the philosophers while they are unlocked. 
+Once a pihlosopher grabs a fork, it locks itself in a mutex and disappears from the table, becoming unavailable to others.
+We also make sure to display each action performed by philosophers, wether it is eating, sleeping, thinking or even grabbing forks in mutexes so they cannot write at the same time as others (Because they behave independently from all others).
