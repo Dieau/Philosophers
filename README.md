@@ -80,7 +80,15 @@ Once a pihlosopher grabs a fork, it locks itself in a mutex and disappears from 
 
 We also make sure to display each action performed by philosophers, wether it is eating, sleeping, thinking or even grabbing forks in mutexes so they cannot write at the same time as others (Because they behave independently from each other).
 
+
 <a name="deadlock"></a>
 ## 4. How to avoid deadlocks
 
-A big
+A big - if not the biggest - challenge with this project, is how to avoid any deadlock during fork distribution.
+
+For instance, if each philosopher would start the simulation by grabbing the fork at their right, every one of them will end up holding only one fork and starve to death.
+
+An easy solution i chose is to separate philosophers depending on their index : is it even or odd ?
+By
+
+![Screenshot](/img/cf7f850832f8aa117e3246babe2e4abb.jpg)
