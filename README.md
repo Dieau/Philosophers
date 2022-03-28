@@ -11,6 +11,7 @@ In this project, we will learn the basics of threading a process and using mutex
 1. [ The Dining Philosophers Problem. ](#desc)
 2. [ Threads. ](#threads)
 3. [ Mutexes. ](#mutexes)
+4. [How to avoid Deadlocks.](#deadlock)
 
 <a name="desc"></a>
 ## 1. The Dining Philosophers Problem
@@ -74,5 +75,10 @@ In computer science, a lock or mutex (from mutual exclusion) is a synchronizatio
 ![Screenshot](/img/Mutex.png)
 
 Here, we will represent each fork by a mutex, and make them available to the philosophers while they are unlocked. 
+
 Once a pihlosopher grabs a fork, it locks itself in a mutex and disappears from the table, becoming unavailable to others.
+
 We also make sure to display each action performed by philosophers, wether it is eating, sleeping, thinking or even grabbing forks in mutexes so they cannot write at the same time as others (Because they behave independently from all others).
+
+<a name="deadlock"></a>
+## 4. How to avoid deadlocks
