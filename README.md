@@ -71,7 +71,7 @@ By defining our philosophers as Threads, we can assure their independence from t
 Another amazing tool that makes the program work : Mutexes.
 
 The main problem with the philosophers diner, is fork management.
-We must assure that once a fork is picked up,, it should disappear from the table and not be accessible by another philosopher, in which case we would face a data race.
+We must assure that once a fork is picked up, it should disappear from the table and not be accessible by another philosopher, in which case we would face a data race.
 
 In computer science, a lock or mutex (from mutual exclusion) is a synchronization primitive: a mechanism that enforces limits on access to a resource when there are many threads of execution. A lock is designed to enforce a mutual exclusion concurrency control policy.
 
