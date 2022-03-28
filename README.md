@@ -9,8 +9,8 @@ In this project, we will learn the basics of threading a process and using mutex
 # Table of Contents
 
 1. [ The Dining Philosophers Problem. ](#desc)
-2. [ Usage tips. ](#usage)
-3. 
+2. [ My implementation. ](#solution)
+3. [ The deadlock issue. ](#deadlock)
 
 <a name="desc"></a>
 ## 1. The Dining Philosophers Problem
@@ -33,7 +33,7 @@ Eating is not limited by the remaining amounts of spaghetti or stomach space; an
 
 The problem is how to design a discipline of behavior (a concurrent algorithm) such that no philosopher will starve; i.e., each can forever continue to alternate between eating and thinking, assuming that no philosopher can know when others may want to eat or think.
 
-<a name="usage"></a>
+<a name="solution"></a>
 ## 2. Usage tips
 
 sometext
