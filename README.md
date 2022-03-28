@@ -31,7 +31,9 @@ Now each philosopher will go cyclically through the states 0, 1, 2, 0, ...
 
 ![Screenshot](/img/happy_ron.png)
 
-Each philosopher must alternately think and eat. However, a philosopher can only eat spaghetti when they have both left and right forks. Each fork can be held by only one philosopher at a time and so a philosopher can use the fork only if it is not being used by another philosopher. After an individual philosopher finishes eating, they need to put down both forks so that the forks become available to others. A philosopher can only take the fork on their right or the one on their left as they become available, and they cannot start eating before getting both forks.
+Each philosopher must alternately think and eat. However, a philosopher can only eat spaghetti when they have both left and right forks. Each fork can be held by only one philosopher at a time and so a philosopher can use the fork only if it is not being used by another philosopher. 
+
+After an individual philosopher finishes eating, they need to put down both forks so that the forks become available to others. A philosopher can only take the fork on their right or the one on their left as they become available, and they cannot start eating before getting both forks.
 
 Eating is not limited by the remaining amounts of spaghetti or stomach space; an infinite supply and an infinite demand are assumed.
 
@@ -40,7 +42,7 @@ The problem is how to design a discipline of behavior (a concurrent algorithm) s
 <a name="threads"></a>
 ## 2. Threads
 
-In my project, we use the user's input to define the parameters of the program.
+In my project, execution input is used to define the parameters of the program.
 For the simulation to start, the user must enter: 
 
 [Number of philosophers] - How many philosophers are seated at the table, 
