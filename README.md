@@ -47,7 +47,7 @@ For the simulation to start, the user must enter:
 
 [Time to die] - The time a philosopher takes to die after his last meal, 
 
-[Time to eat] - Time a philosopher takes to eat his meal, 
+[Time to eat] - The time a philosopher takes to eat his meal, 
 
 [Time to sleep] - The time during which a philosopher will sleep, just after eating, 
 
