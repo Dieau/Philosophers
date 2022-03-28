@@ -51,6 +51,12 @@ For the simulation to start, the user must enter:
 
 The [Number of meals] required to end the simulation (Optionnal).
 
+As such, our algorithm should run no matter the number of philosophers at the table.
+The key for this to work, is to represent each philosopher by a Thread of the main process. 
+
+![Screenshot](/img/1200px-Multithreaded_process.svg.png)
+
+In computer science, a thread of execution is the smallest sequence of programmed instructions that can be managed independently by a scheduler, which is typically a part of the operating system. The implementation of threads and processes differs between operating systems, but in most cases a thread is a component of a process. The multiple threads of a given process may be executed concurrently (via multithreading capabilities), sharing resources such as memory, while different processes do not share these resources.
 
 
 <a name="deadlock"></a>
