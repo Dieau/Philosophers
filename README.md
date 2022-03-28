@@ -36,6 +36,9 @@ Eating is not limited by the remaining amounts of spaghetti or stomach space; an
 The problem is how to design a discipline of behavior (a concurrent algorithm) such that no philosopher will starve; i.e., each can forever continue to alternate between eating and thinking, assuming that no philosopher can know when others may want to eat or think.
 
 <a name="solution"></a>
-## 2. Usage tips
+## 2. My implementation
 
 sometext
+
+<a name="deadlock"></a>
+## 3. 
