@@ -87,7 +87,7 @@ We also make sure to display each action performed by philosophers, wether it is
 
 A big - if not the biggest - challenge with this project, was how to avoid any deadlock during fork distribution.
 
-For instance, if each philosopher would start the simulation by grabbing the fork at their right, every one of them will end up holding only one fork and starve to death.
+For instance, if each philosopher was to start the simulation by grabbing the fork at their right, each one of them would end up holding only one fork and starve to death.
 
 An easy way to avoid this issue is to separate philosophers depending on their index : is it even or odd ?
 
