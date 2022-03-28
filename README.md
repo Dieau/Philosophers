@@ -1,13 +1,14 @@
 # Philosophers
 
-In this project, we will learn the basics of threading a process.
-We will see how to create threads and discover mutexes.
+The dining philosophers problem is an illustration of a deadlock, a state in which multiple processes are waiting for a single resource currently being used by another process, and the solutions to these types of problems. 
+
+In this project, we will learn the basics of threading a process and using mutexes.
 
 ![Screenshot](/img/introgif.gif)
 
 # Table of Contents
 
-1. [ Description. ](#desc)
+1. [ The Dining Philosophers Problem. ](#desc)
 2. [ Usage tips. ](#usage)
 3. 
 
