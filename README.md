@@ -17,6 +17,8 @@ In this project, we will learn the basics of threading a process and using mutex
 
 Five philosophers, numbered from 0 through 4, live in a house where the table is laid for them; each philosopher has their own place at the table. Their only problem – besides those of philosophy – is that the dish served is a very difficult kind of spaghetti, that has to be eaten with two forks. There are two forks next to each plate, so that presents no difficulty: as a consequence, however, no two neighbours may be eating simultaneously.
 
+![Screenshot](/img/at_the_table.png)
+
 A very naive solution associates with each fork a binary semaphore with the initial value = 1 (indicating that the fork is free) and, naming in each philosopher these semaphores in a local terminology, we could think the following solution for the philosopher's life adequate.
 
 But this solution – although it guarantees that no two neighbours are eating simultaneously – must be rejected because it contains the danger of the deadly embrace (deadlock). When all five philosophers get hungry simultaneously, each will grab his left-hand fork and from that moment onwards the group is stuck.
