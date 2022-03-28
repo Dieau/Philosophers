@@ -39,7 +39,12 @@ The problem is how to design a discipline of behavior (a concurrent algorithm) s
 ## 2. My implementation
 
 In my project, we use the user's input to define the parameters of the program.
-For the simulation to start, the user must enter the [Number of philosophers] (How many philosophers are seated at the table), [Time to die](The time a philosopher takes to die after his last meal), [Time to eat] (Time a philosopher takes to eat his meal), [Time to sleep] (The time during which a philosopher will sleep, just after eating), and lastly the [Number of meals] required to end the simulation (Optionnal).
+For the simulation to start, the user must enter: 
+[Number of philosophers] (How many philosophers are seated at the table), 
+[Time to die](The time a philosopher takes to die after his last meal), 
+[Time to eat] (Time a philosopher takes to eat his meal), 
+[Time to sleep] (The time during which a philosopher will sleep, just after eating), 
+and lastly the [Number of meals] required to end the simulation (Optionnal).
 
 
 <a name="deadlock"></a>
