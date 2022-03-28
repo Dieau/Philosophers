@@ -89,7 +89,7 @@ A big - if not the biggest - challenge with this project, is how to avoid any de
 
 For instance, if each philosopher would start the simulation by grabbing the fork at their right, every one of them will end up holding only one fork and starve to death.
 
-An easy way to avoid this issue, is to separate philosophers depending on their index : is it even or odd ?
+An easy way to avoid this issue is to separate philosophers depending on their index : is it even or odd ?
 
 ![Screenshot](/img/cf7f850832f8aa117e3246babe2e4abb.jpg)
 
@@ -103,5 +103,9 @@ This way, we break the straightness of fork grabbing and the philosophers will a
 <a name="conc"></a>
 ## 5. Conclusion
 
+I really enjoyed working on this project; even if threads and mutexes are not the most inspirating tools at first glance, they allow processes to operate on a whole new level, synchronization-wise.
 
+The Dining Philosophers problem was a good way to introduce myself to these new tools, mainly thanks to the "Riddle" side of the project which make me bash my head a couple times, but was fun overall.
+
+If i had to redo this project, i would try a better handling of the philosophers death, and a more well-organized data structure - as mine is a little messy.
 ![Screenshot](/img/100.png)
