@@ -107,6 +107,6 @@ I really enjoyed working on this project; even if threads and mutexes are not th
 
 The Dining Philosophers problem was a good way to introduce myself to these new tools, mainly thanks to the "Riddle" side of the project which made me bash my head a couple times, but was fun overall.
 
-If i had to redo this project, i would try a better handling of the philosophers death, and a more well-organized data structure - as mine is a little messy.
+If i had to redo this project, i would try using a better handling of the philosophers deaths, and a more well-organized data structure - as mine is a little messy.
 
 ![Screenshot](/img/100.png)
