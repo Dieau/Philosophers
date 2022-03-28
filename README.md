@@ -17,13 +17,13 @@ In this project, we will learn the basics of threading a process and using mutex
 <a name="desc"></a>
 ## 1. The Dining Philosophers Problem
 
-Five philosophers, numbered from 0 through 4, live in a house where the table is laid for them; each philosopher has their own place at the table. Their only problem – besides those of philosophy – is that the dish served is a very difficult kind of spaghetti, that has to be eaten with two forks. There are two forks next to each plate, so that presents no difficulty: as a consequence, however, no two neighbours may be eating simultaneously.
+Five philosophers, numbered from 0 through 4, live in a house where the table is laid for them; each philosopher has their own seat at the table. Their only problem – besides those of philosophy – is that the dish served is a very unusual kind of spaghetti, that has to be eaten with two forks. There are two forks next to each plate, so that presents no difficulty: as a consequence, however, two neighbours may not be eating simultaneously.
 
 ![Screenshot](/img/at_the_table.png)
 
 A very naive solution associates with each fork a binary semaphore with the initial value = 1 (indicating that the fork is free) and, naming in each philosopher these semaphores in a local terminology, we could think the following solution for the philosopher's life adequate.
 
-But this solution – although it guarantees that no two neighbours are eating simultaneously – must be rejected because it contains the danger of the deadly embrace (deadlock). When all five philosophers get hungry simultaneously, each will grab his left-hand fork and from that moment onwards the group is stuck.
+But this solution – although it guarantees that no two neighbours are eating simultaneously – must be rejected because it contains the danger of the deadly embrace (deadlock). When all five philosophers get hungry simultaneously, each will grab his left-hand fork and from that moment onwards the group will be stuck.
 
 In order to be able to give a formal description, we associate with each philosopher a state variable, "C" say, where C[i] = 0 means: philosopher i is thinking, C[i] = 1 means: philosopher i is hungry, C[i] = 2 means: philosopher i is eating.
 
@@ -35,9 +35,9 @@ Each philosopher must alternately think and eat. However, a philosopher can only
 
 After an individual philosopher finishes eating, they need to put down both forks so that the forks become available to others. A philosopher can only take the fork on their right or the one on their left as they become available, and they cannot start eating before getting both forks.
 
-Eating is not limited by the remaining amounts of spaghetti or stomach space; an infinite supply and an infinite demand are assumed.
+Eating is not limited by the remaining amounts of spaghetti or how full their stomach is; an infinite supply and an infinite demand are assumed.
 
-The problem is how to design a discipline of behavior (a concurrent algorithm) such that no philosopher will starve; i.e., each can forever continue to alternate between eating and thinking, assuming that no philosopher can know when others may want to eat or think.
+The problem is how to design a discipline of behavior (a concurrent algorithm) such that no philosopher will starve; i.e., each can forever continue to alternate between eating and thinking, assuming that none of the philosophers are able to know when others might want to eat or think.
 
 <a name="threads"></a>
 ## 2. Threads
@@ -71,7 +71,7 @@ By defining our philosophers as Threads, we can assure their independence from t
 Another amazing tool that makes the program work : Mutexes.
 
 The main problem with the philosophers diner, is fork management.
-We must be sure that once a fork is picked up, it should disappear from the table and not be accessible by another philosopher, in which case we would face a data race.
+We must assure that once a fork is picked up,, it should disappear from the table and not be accessible by another philosopher, in which case we would face a data race.
 
 In computer science, a lock or mutex (from mutual exclusion) is a synchronization primitive: a mechanism that enforces limits on access to a resource when there are many threads of execution. A lock is designed to enforce a mutual exclusion concurrency control policy.
 
@@ -81,7 +81,7 @@ Here, we will represent each fork by a mutex, and make them available to the phi
 
 Once a pihlosopher grabs a fork, it locks itself in a mutex and disappears from the table, becoming unavailable to others.
 
-We also make sure to display each action performed by philosophers, wether it is eating, sleeping, thinking or even grabbing forks in mutexes so they cannot write at the same time as others (Because they behave independently from each other).
+We also make sure to display each action performed by philosophers, whether it is eating, sleeping, thinking or even grabbing forks in mutexes so they cannot write at the same time as others (Because they behave independently from each other).
 
 
 <a name="deadlock"></a>
