@@ -10,7 +10,7 @@ In this project, we will learn the basics of threading a process and using mutex
 
 1. [ The Dining Philosophers Problem. ](#desc)
 2. [ Threads. ](#threads)
-3. [ The deadlock issue. ](#deadlock)
+3. [ Mutexes. ](#mutexes)
 
 <a name="desc"></a>
 ## 1. The Dining Philosophers Problem
@@ -61,7 +61,12 @@ In computer science, a thread of execution is the smallest sequence of programme
 By using defining our philosophers as Threads, we can assure their independence from the others while still letting them access the memory they need for their routine (The forks for instance, or to check if any other philosopher has died).
 
 
-<a name="deadlock"></a>
-## 3. The deadlock issue
+<a name="mutex"></a>
+## 3. Mutexes
 
+Another amazing tool that makes the program work : Mutexes.
 
+The main problem with the philosophers diner, is fork management.
+We must be sure that once a fork is picked up, it should disappear from the table and not be accessible by another philosopher, in which case we would face a data race.
+
+In computer science, a lock or mutex (from mutual exclusion) is a synchronization primitive: a mechanism that enforces limits on access to a resource when there are many threads of execution. A lock is designed to enforce a mutual exclusion concurrency control policy.
